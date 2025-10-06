@@ -1,0 +1,16 @@
+RELATÓRIO DE CONCLUSÃO DE ETAPA
+==============================
+
+Aeronave: Taliban (Militar)
+Cliente: Administrador do Sistema
+Data de entrega estimada: 2025-09-20 22:30:00
+
+Etapas realizadas:
+- Construir coisas (Concluída em 10/5/2025)
+
+Peças utilizadas:
+- Roda (Fornecedor: testestetes)
+
+Resultados dos testes:
+- Hidráulico: Aprovado
+- Elétrico: Reprovado
