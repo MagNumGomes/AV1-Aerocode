@@ -54,7 +54,7 @@ Siga as instruções abaixo para configurar e executar o projeto em seu ambiente
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/AV2-Aerocode](https://github.com/seu-usuario/AV2-Aerocode)
+    git clone [https://github.com/MagNumGomes/AV2-Aerocode](https://github.com/MagNumGomes/AV2-Aerocode)
     ```
 
 2.  **Navegue até a pasta do projeto:**
