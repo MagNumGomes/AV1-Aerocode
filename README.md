@@ -1,50 +1,45 @@
-# ✈️ Aerocode - Sistema de Gestão de Produção de Aeronaves
+# ✈️ Aerocode - GUI do Sistema de Gestão de Produção
 
-![TypeScript](https://img.shields.io/badge/typescript-%233178C6.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 
-Sistema de interface de linha de comando (CLI) para simular e gerenciar o processo de produção de aeronaves, inspirado nas necessidades de grandes empresas do setor aeroespacial, como a Embraer. Este projeto foi desenvolvido como o Produto Mínimo Viável (MVP) da empresa fictícia Aerocode.
+Este repositório contém o front-end (GUI) para o **Aerocode**, um Sistema de Gestão da Produção de Aeronaves. Este projeto foi desenvolvido em **Next.js** e **React** como a Atividade de Avaliação 2 (AV2), servindo como a interface de usuário moderna para o back-end CLI (AV1).
 
 ## 📄 Sobre o Projeto
 
-A Aerocode é uma empresa especializada no desenvolvimento de software para a indústria aeronáutica. Este sistema é o seu primeiro produto, uma ferramenta CLI robusta para gerenciar todas as fases da construção de uma aeronave, desde o cadastro inicial de peças e etapas até a geração de relatórios para entrega final ao cliente. A escolha por uma interface de linha de comando foi estratégica para garantir eficiência, baixo custo e a capacidade de automatizar tarefas em ambientes onde a interação visual é limitada.
+Este projeto é a evolução do sistema de linha de comando (CLI) da Aerocode. A AV2 estabeleceu a necessidade de uma interface gráfica (GUI) para resolver os desafios de usabilidade da CLI, que possuía uma curva de aprendizado longa.
+
+Esta Aplicação de Página Única (SPA) foi construída para oferecer uma experiência de usuário fluida e visualmente intuitiva, facilitando o gerenciamento da produção e posicionando o produto Aerocode para competir no mercado de grandes empresas aeroespaciais, como Boeing e Airbus.
 
 ## ✨ Funcionalidades
 
-O sistema permite um controle detalhado sobre o fluxo de produção, incluindo:
+A interface web implementa todos os módulos de gerenciamento definidos nos requisitos da AV1, incluindo:
 
 * **✈️ Gestão de Aeronaves:**
-    * Cadastro de aeronaves com código único, modelo, tipo (Comercial ou Militar), capacidade e alcance.
-    * Visualização de detalhes completos de cada aeronave de forma organizada.
+    * Cadastro e listagem de aeronaves (Comercial ou Militar).
+    * Visualização de detalhes, capacidade e alcance.
 
 * **🔩 Gestão de Peças:**
-    * Registro de peças (Nacionais ou Importadas) com nome, fornecedor e status.
-    * Métodos para atualizar o status de uma peça (Em produção, Em transporte, Pronta para uso).
+    * Registro de peças (Nacionais ou Importadas) e fornecedores.
+    * Atualização de status (Em produção, Em transporte, Pronta).
 
 * **🧱 Gestão de Etapas de Produção:**
-    * Definição de etapas com nome, prazo e status (Pendente, Em andamento, Concluída).
-    * Controle de fluxo que impede a conclusão de uma etapa sem que a anterior tenha sido finalizada.
+    * Definição de etapas com prazos e status (Pendente, Em andamento, Concluída).
+    * Controle de fluxo para garantir a ordem correta das etapas.
 
 * **👷 Gestão de Funcionários e Permissões:**
-    * Cadastro de funcionários com identificador único, nome, telefone e endereço.
-    * Sistema de autenticação com login e senha.
-    * Controle de acesso baseado em níveis de permissão (ex: Administrador, Gerente, Técnico) para restringir o acesso a funcionalidades críticas.
-    * Associação de um ou mais funcionários a etapas específicas da produção.
+    * Cadastro de funcionários e sistema de autenticação.
+    * Controle de acesso baseado em níveis (Administrador, Engenheiro, Operador).
 
 * **🧪 Gestão de Testes:**
-    * Execução e registro de testes Elétricos, Hidráulicos e Aerodinâmicos.
-    * Cada teste possui um resultado de "Aprovado" ou "Reprovado".
-
-* **📄 Relatórios e Persistência:**
-    * Geração de um relatório final salvo em arquivo de texto (`.txt`) com todos os detalhes da aeronave pronta para entrega.
-    * Persistência de todos os dados em um banco de dados local (SQLite).
+    * Registro de testes Elétricos, Hidráulicos e Aerodinâmicos (Aprovado/Reprovado).
 
 ## 💻 Tecnologias Utilizadas
 
+* **Framework:** [Next.js](https://nextjs.org/)
+* **Biblioteca:** [React](https://reactjs.org/)
 * **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
-* **Ambiente de Execução:** [Node.js](https://nodejs.org/)
-* **Banco de Dados:** [better-sqlite3](https://github.com/WiseLibs/better-sqlite3)
-* **Interface de Comando:** [Inquirer.js](https://github.com/SBoudrias/Inquirer.js)
 
 ## 🚀 Começando
 
@@ -59,56 +54,28 @@ Siga as instruções abaixo para configurar e executar o projeto em seu ambiente
 
 1.  **Clone o repositório:**
     ```bash
-    git clone https://github.com/MagNumGomes/AV1-Aerocode
+    git clone [https://github.com/seu-usuario/AV2-Aerocode](https://github.com/seu-usuario/AV2-Aerocode)
     ```
 
 2.  **Navegue até a pasta do projeto:**
     ```bash
-    cd AV1-Aerocode
+    cd AV2-Aerocode
     ```
 
 3.  **Instale as dependências:**
-    Este comando irá baixar todas as bibliotecas listadas no `package.json`.
+    (A flag `--legacy-peer-deps` é usada para resolver conflitos de versão mais antigos).
     ```bash
-    npm install
+    npm install --legacy-peer-deps
     ```
 
 4.  **Execute a aplicação:**
-    O comando abaixo utiliza o `ts-node` para compilar e executar o projeto em um único passo.
+    O comando abaixo inicia o servidor de desenvolvimento do Next.js.
     ```bash
-    npx ts-node src/app.ts
+    npm run dev
     ```
 
-Após executar o comando, o sistema de banco de dados será inicializado e a tela de login aparecerá no seu terminal.
+Após executar o comando, o sistema estará acessível em `http://localhost:3000` no seu navegador.
 
-> **Login Padrão (Admin):**
-> * **Email:** `admin@aerocode.com`
+> **Login Padrão (Sugestão de Demo):**
+> * **Usuário:** `admin`
 > * **Senha:** `admin123`
-
-## 📂 Estrutura de Pastas
-
-O projeto está organizado da seguinte forma:
-
-```
-/av1
-├── node_modules/
-├── src/
-│   ├── db/
-│   │   ├── connection.ts   # Configuração da conexão com o SQLite
-│   │   └── schema.ts       # Criação das tabelas e dados iniciais
-│   ├── services/
-│   │   ├── aircraft.ts     # Lógica de negócio para aeronaves
-│   │   ├── employee.ts     # Lógica de negócio para funcionários
-│   │   ├── part.ts         # Lógica de negócio para peças
-│   │   ├── stage.ts        # Lógica de negócio para etapas
-│   │   └── test.ts         # Lógica de negócio para testes
-│   ├── utils/
-│   │   ├── auth.ts         # Funções de login e controle de permissão
-│   │   ├── menu.ts         # Lógica da interface de linha de comando
-│   │   └── reports.ts      # Geração de relatórios
-│   └── app.ts              # Ponto de entrada da aplicação
-├── .gitignore
-├── package-lock.json
-├── package.json
-└── tsconfig.json
-```
